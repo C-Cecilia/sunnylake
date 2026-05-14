@@ -1,0 +1,80 @@
+.stay {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--gap-xl);
+  padding: var(--section-py) var(--section-px);
+  align-items: center;
+}
+
+.stay__image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.stay__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.stay__image:hover img {
+  transform: scale(1.03);
+}
+
+.stay__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.stay__title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.stay__body {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+.stay__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: 1.5px solid var(--text);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background var(--transition), color var(--transition);
+  margin-top: 8px;
+}
+
+.stay__btn:hover {
+  background: var(--text);
+  color: var(--white);
+}
+
+.stay__btn:hover .stay__btn-arrow {
+  filter: invert(1);
+}
+
+.stay__btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: filter var(--transition);
+}
+
+@media (max-width: 900px) {
+  .stay { grid-template-columns: 1fr; }
+}

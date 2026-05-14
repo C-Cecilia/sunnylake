@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --bg:           #f0ede5;
+  --white:        #ffffff;
+  --text:         #1a1a14;
+  --text-muted:   #7a7a6a;
+  --text-light:   #b0b0a0;
+  --border:       rgba(26, 26, 20, 0.1);
+  --overlay-dark: rgba(8, 12, 6, 0.60);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Layout */
+  --navbar-height: 72px;
+  --section-px:    64px;
+  --section-py:    96px;
+
+  /* Spacing */
+  --gap-sm: 16px;
+  --gap-md: 32px;
+  --gap-lg: 64px;
+  --gap-xl: 96px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Motion */
+  --ease:       cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --section-px: 24px;
+    --section-py: 64px;
+    --gap-lg:     40px;
+    --gap-xl:     56px;
+  }
+}

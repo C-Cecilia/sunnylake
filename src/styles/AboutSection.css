@@ -1,0 +1,82 @@
+.about {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: calc(100vh - var(--navbar-height));
+  padding: var(--section-py) 45px;
+  align-items: flex-start;
+  overflow: clip;
+}
+
+/* ─── LEFT ─────────────────────────────────────────────────── */
+.about__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 40px;
+  padding-top: 4px;
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.about__body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+.about__body + .about__body {
+  margin-top: 20px;
+}
+
+/* ─── RIGHT ────────────────────────────────────────────────── */
+.about__right {
+  height: calc(100vh - var(--navbar-height) - 60px * 2);
+  padding-left: 34px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+}
+
+/* Clip: the visible window */
+.about__clip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+/* Each slide is absolutely stacked — JS controls translateY */
+.about__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.about__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+  .about__right {
+    height: 60vw;
+    padding: 0;
+  }
+}
